@@ -1,0 +1,11 @@
+.search-input-box{
+    outline: none;
+    width: 35rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.search-submit{
+    display: none;
+}
