@@ -1,39 +1,20 @@
 import './App.css';
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import Card from './components/Card/Card';
-import Search from './components/Search/Search';
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home/Home';
+import Movie from './pages/Movie/Movie';
 
 function App() {
-  const[keyword, setKeyword] = useState('');
-  const[movies, setMovies] = useState([]);
-  const[loading, setLoading] = useState(false); 
-  
-  useEffect(()=>{
-    setLoading(true);
-
-    const baseURL = `https://api.themoviedb.org/3/search/movie?api_key=b56058299cbea0093f5ccfb9e43c52a4&language=en-US&query=${keyword}&page=1&include_adult=false`;
-    axios.get(baseURL)
-    .then(res => setMovies(res.data.results))
-    .catch(err => console.error(err)); 
-
-    setLoading(false);
-  }, [keyword])  
+    
 
   return (
     <div className="App">
-      <h1 className='App-header'>Movie Mania</h1>
-        <Search setKeyword={setKeyword} />
-        <div className='movie-listing'>
-          {
-            movies.length === 0 
-            ? keyword.length > 0 && loading === false && <h2 className='not-found-text'>No result found...</h2>
-            : movies.map(movie => (
-               <Card key={movie.id} movie={movie} />
-            )            
-            )
-          }          
-        </div>
+     
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/movie/:id' element={<Movie />} />
+        </Routes>
+           
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.App-header {
+  color: white;
+  font-size: 3.5rem;
+}
+
+.movie-listing{
+  padding: 2rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.not-found-text{
+  color: white;
+  
+}
