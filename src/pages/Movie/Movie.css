@@ -6,8 +6,8 @@
 }
 
 .poster-image{
-    height: 20rem;
-    width: 15rem;
+    height: 25rem;
+    width: 20rem;
     margin: 1rem 2rem;
 }
 
@@ -22,7 +22,7 @@
     padding: 0.75rem 1.5rem;
     background-color:#072f47;
     outline: none;
-    margin-top: 3rem;
+    margin-top: 0.5rem;
     color: white;
     font-weight: bold;
     font-size: 1rem;
@@ -30,5 +30,19 @@
 }
 
 .close-btn:hover{
+    background-color: #0d4263;
+}
+
+.like-btn{
+    padding: 0.75rem 1.5rem;
+    background-color:#072f47;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.like-btn:hover {
     background-color: #0d4263;
 }
