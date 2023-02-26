@@ -15,8 +15,6 @@ const Movie = ({ likes, setLikes, views, setViews}) => {
     Description: ''
   });
 
-  const Views = views.find(id === views.id)
-  console.log(Views);
 
   useEffect(()=>{
    const baseURL = `https://api.themoviedb.org/3/movie/${id}?api_key=b56058299cbea0093f5ccfb9e43c52a4&language=en-US`;
